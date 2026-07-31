@@ -1,512 +1,273 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1623717142444317');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1623717142444317&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Premium Telegram Landing</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<title>Free Telegram Trading Community</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-
-:root{
-  --bg:#020617;
-  --cyan:#00eaff;
-  --purple:#7b2cff;
-  --white:#ffffff;
-  --gray:#bfc8d8;
-}
-
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Poppins',sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
 }
-
 body{
-  min-height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  padding:20px;
-
-  background:
-  radial-gradient(circle at top,
-  #0b2447 0%,
-  #020617 40%,
-  #000000 100%);
+background:#090909;
+color:#fff;
+overflow-x:hidden;
 }
-
-/* MAIN CONTAINER */
-
-.container{
-  width:100%;
-  max-width:420px;
-
-  padding:35px 25px;
-
-  border-radius:28px;
-
-  background:rgba(255,255,255,0.03);
-
-  border:1px solid rgba(0,234,255,0.35);
-
-  backdrop-filter:blur(14px);
-
-  box-shadow:
-  0 0 15px rgba(0,234,255,0.15),
-  0 0 35px rgba(0,234,255,0.08),
-  inset 0 0 20px rgba(255,255,255,0.02);
-
-  text-align:center;
-
-  position:relative;
-
-  animation:
-  fadeUp 1s ease,
-  borderGlow 4s infinite alternate;
+.bg-animation{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:
+radial-gradient(circle at top,#FFD70022,transparent 35%),
+radial-gradient(circle at bottom,#00ff8822,transparent 35%),
+#090909;
+z-index:-1;
 }
-
-/* GLOW BORDER */
-
-.container::before{
-  content:"";
-  position:absolute;
-  inset:-1px;
-  border-radius:28px;
-
-  padding:1px;
-
-  background:
-  linear-gradient(135deg,
-  rgba(0,234,255,0.9),
-  rgba(123,44,255,0.4),
-  rgba(0,234,255,0.9));
-
-  -webkit-mask:
-  linear-gradient(#fff 0 0) content-box,
-  linear-gradient(#fff 0 0);
-
-  -webkit-mask-composite:xor;
-  mask-composite:exclude;
-
-  pointer-events:none;
-}
-
-/* PROFILE */
-
-.profile-img{
-  width:120px;
-  height:120px;
-
-  border-radius:50%;
-  object-fit:cover;
-
-  border:3px solid var(--cyan);
-
-  box-shadow:
-  0 0 15px var(--cyan),
-  0 0 40px rgba(0,234,255,0.6);
-
-  animation:pulse 2.5s infinite;
-}
-
-/* ========================= */
-/* CHANGE IMAGE HERE 🔥 */
-/* ========================= */
-
-/*
-REPLACE IMAGE LINK BELOW
-
-https://i.imgur.com/8Km9tLL.png
-
-WITH YOUR OWN IMAGE LINK
-*/
-
-/* LIVE COUNTER */
-
-.live-counter{
-  margin-top:14px;
-
-  color:var(--cyan);
-
-  font-size:14px;
-  font-weight:600;
-
-  text-shadow:0 0 10px rgba(0,234,255,0.7);
-}
-
-/* NAME */
-
-.name{
-  margin-top:18px;
-
-  color:white;
-
-  font-size:30px;
-  font-weight:700;
-
-  text-align:center;
-
-  text-shadow:
-  0 0 12px rgba(0,234,255,0.6);
-}
-
-/* EXTRA BUTTON */
-
 .top-btn{
-  margin-top:18px;
+padding:20px;
+text-align:center;
+}
+.top-btn a,.join,.sticky a{
+display:block;
+max-width:420px;
+margin:auto;
+padding:18px;
+border-radius:50px;
+text-decoration:none;
+font-weight:700;
+background:linear-gradient(90deg,#FFD700,#ff9800);
+color:#000;
+}
+.hero{
+padding:30px 20px;
+text-align:center;
+}
+.profile{
+width:180px;
+height:180px;
+border-radius:50%;
+border:5px solid #FFD700;
+object-fit:cover;
+}
+.verified{
+display:inline-block;
+margin:15px 0;
+padding:8px 20px;
+border:1px solid #FFD700;
+border-radius:50px;
+color:#FFD700;
+}
+.stats{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin:35px 0;
+}
+.stats div{
+background:#141414;
+padding:20px;
+border-radius:15px;
+width:110px;
+}
+.features,.risk{
+padding:60px 20px;
+text-align:center;
+}
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+max-width:1100px;
+margin:auto;
+}
+.card{
+background:#141414;
+padding:25px;
+border-radius:15px;
+}.risk{
+background:#111;
 }
 
-/* BUTTONS */
-
-.buttons{
-  margin-top:28px;
-
-  display:flex;
-  flex-direction:column;
-  gap:15px;
+.sticky{
+position:fixed;
+left:0;
+bottom:0;
+width:100%;
+padding:15px;
+background:#000;
+z-index:999;
 }
 
-.btn{
-  display:block;
-
-  text-decoration:none;
-
-  padding:15px 20px;
-
-  border-radius:50px;
-
-  color:white;
-
-  font-weight:600;
-
-  transition:0.35s ease;
-
-  background:
-  linear-gradient(135deg,var(--cyan),var(--purple));
-
-  box-shadow:
-  0 0 18px rgba(0,234,255,0.35);
+footer{
+padding:35px 20px 110px;
+text-align:center;
+color:#999;
 }
 
-.btn:hover{
-  transform:scale(1.05);
-
-  box-shadow:
-  0 0 22px rgba(0,234,255,0.8),
-  0 0 45px rgba(123,44,255,0.5);
+footer a{
+color:#FFD700;
+text-decoration:none;
+font-weight:700;
 }
 
-/* FEATURES */
-
-.features{
-  margin-top:30px;
-  text-align:left;
+footer a:hover{
+text-decoration:underline;
 }
 
-.feature{
-  display:flex;
-  align-items:center;
-  gap:14px;
-
-  padding:15px 0;
-
-  border-bottom:1px solid rgba(255,255,255,0.08);
-
-  color:var(--gray);
-
-  animation:fadeUp 1s ease;
+.hidden{
+opacity:0;
+transform:translateY(60px);
+transition:.8s;
 }
 
-.icon{
-  font-size:20px;
-
-  filter:
-  drop-shadow(0 0 6px rgba(0,234,255,0.8));
+.show{
+opacity:1;
+transform:translateY(0);
 }
 
-/* DESCRIPTION */
+@media(max-width:768px){
 
-.description{
-  margin-top:26px;
-
-  color:#d2d9e4;
-
-  line-height:1.7;
+.hero h1{
+font-size:30px;
 }
 
-/* QUOTE */
-
-.quote{
-  margin-top:28px;
-
-  color:#b9c1d0;
-
-  font-size:14px;
-
-  line-height:1.8;
+.hero p{
+font-size:15px;
 }
 
-/* BADGE */
-
-.badge{
-  margin-top:28px;
-
-  padding:14px;
-
-  border-radius:18px;
-
-  border:1px solid rgba(0,234,255,0.25);
-
-  background:rgba(255,255,255,0.02);
-
-  color:#d7deeb;
-
-  font-size:13px;
+.profile{
+width:140px;
+height:140px;
 }
 
-.badge a{
-  color:var(--cyan);
-  text-decoration:none;
-  font-weight:600;
+.top-btn a,
+.join,
+.sticky a{
+font-size:17px;
+padding:15px;
 }
 
-/* =============================== */
-/* CHANGE ADVERTISE LINK HERE 🔥 */
-/* =============================== */
-
-/*
-REPLACE # BELOW WITH YOUR LINK
-
-Example:
-https://t.me/yourchannel
-*/
-
-/* FOOTER */
-
-.footer{
-  margin-top:22px;
-
-  font-size:11px;
-
-  line-height:1.8;
-
-  color:rgba(255,255,255,0.45);
+.features h2,
+.risk h2{
+font-size:28px;
 }
 
-/* ANIMATIONS */
-
-@keyframes fadeUp{
-  from{
-    opacity:0;
-    transform:translateY(25px);
-  }
-  to{
-    opacity:1;
-    transform:translateY(0);
-  }
+.stats{
+gap:12px;
 }
 
-@keyframes pulse{
-  0%{
-    box-shadow:
-    0 0 10px var(--cyan),
-    0 0 25px rgba(0,234,255,0.4);
-  }
-
-  50%{
-    box-shadow:
-    0 0 20px var(--cyan),
-    0 0 45px rgba(0,234,255,0.9);
-  }
-
-  100%{
-    box-shadow:
-    0 0 10px var(--cyan),
-    0 0 25px rgba(0,234,255,0.4);
-  }
+.stats div{
+width:95px;
+padding:15px;
 }
 
-@keyframes borderGlow{
-  from{
-    box-shadow:
-    0 0 10px rgba(0,234,255,0.12),
-    0 0 25px rgba(0,234,255,0.06);
-  }
-
-  to{
-    box-shadow:
-    0 0 18px rgba(0,234,255,0.25),
-    0 0 40px rgba(0,234,255,0.15);
-  }
 }
-
-/* MOBILE */
-
-@media(max-width:480px){
-
-  .name{
-    font-size:25px;
-  }
-
-}
-
 </style>
-</head>
 
+</head>
 <body>
 
-<div class="container">
+<div class="bg-animation"></div>
 
-  <!-- PROFILE IMAGE -->
-
-  <!-- ===================== -->
-  <!-- CHANGE IMAGE HERE 🔥 -->
-  <!-- ===================== -->
-
-  <img
-    src="logo.png"
-    class="profile-img"
-    alt="Profile"
-  >
-
-  <!-- LIVE COUNTER -->
-
-  <div class="live-counter">
-    🔴 Live Traders: <span id="counter">876</span>
-  </div>
-
-  <!-- NAME -->
-
-  <div class="name">
-    𝐍𝐚𝐯𝐣𝐨𝐭 𝐁𝐫𝐚𝐫 𝐎𝐟𝐟𝐢𝐜𝐢𝐚𝐥
-  </div>
-
-  <!-- EXTRA BUTTON -->
-
-  <div class="top-btn">
-
-    <!-- ============================ -->
-    <!-- CHANGE FIRST BUTTON LINK 🔥 -->
-    <!-- ============================ -->
-
-    <a href="https://t.me/+wJdzndMnJ-A0YWU1" class="btn">
-      WATCH FREE SESSION
-    </a>
-
-  </div>
-
-  <!-- FEATURES -->
-
-  <div class="features">
-
-    <div class="feature">
-      <div class="icon">🌐</div>
-      <div>Learning & Educational Sessions</div>
-    </div>
-
-    <div class="feature">
-      <div class="icon">📊</div>
-      <div>Market Concepts & Awareness</div>
-    </div>
-
-    <div class="feature">
-      <div class="icon">💎</div>
-      <div>Chart Reading Concepts</div>
-    </div>
-
-    <div class="feature">
-      <div class="icon">💻</div>
-      <div>Educational Case Discussions</div>
-    </div>
-
-  </div>
-
-  <!-- DESCRIPTION -->
-
-  <div class="description">
-    Join our learning community and grow your knowledge
-  </div>
-
-  <!-- SECOND BUTTON -->
-
-  <div class="buttons">
-
-    <!-- =============================== -->
-    <!-- CHANGE TELEGRAM BUTTON LINK 🔥 -->
-    <!-- =============================== -->
-
-    <a href="https://t.me/+wJdzndMnJ-A0YWU1" class="btn">
-      JOIN TELEGRAM
-    </a>
-
-  </div>
-
-  <!-- QUOTE -->
-
-  <div class="quote">
-    नियत अच्छी और मेहनत सच्ची हो, तो कामयाबी जरूर मिलती है।
-  </div>
-
-  <!-- BADGE -->
-
-  <div class="badge">
-
-    "हम नही हमारे परिणाम 
-
-    <!-- ================================= -->
-    <!-- CHANGE ADVERTISE LINK HERE 🔥 -->
-    <!-- ================================= -->
-
-    <a href="#">
-      बोलते हैं"
-    </a>
-
-  </div>
-
-  <!-- FOOTER -->
-
-  <div class="footer">
-    Terms | Privacy | Disclaimer <br>
-    This site is not part of Facebook™ or endorsed by Facebook™.
-  </div>
-
+<div class="top-btn">
+<a href="https://t.me/+LS0QvSe7sQ4wMmFl" target="_blank">
+🚀 JOIN FREE TELEGRAM CHANNEL
+</a>
 </div>
 
-<script>
+<section class="hero">
 
-/* LIVE COUNTER */
+<img src="BADSHA.JPG.JPG" class="profile" alt="Baadshah Broking">
 
-let count = 876;
+<h1>Baadshah Broking™ (ORIGINAL)</h1>
 
-setInterval(() => {
+<div class="verified">
+⭐ Trusted Trading Community
+</div>
 
-  count += Math.floor(Math.random() * 3);
+<p>
+Join India's Fast Growing Telegram Community for Educational Market Analysis, Learning Resources & Daily Updates.
+</p>
 
-  document.getElementById("counter").innerText = count;
+<div class="stats">
+<div>
+<h2>10K+</h2>
+<span>Members</span>
+</div>
 
-}, 3000);
+<div>
+<h2>4.9★</h2>
+<span>Rating</span>
+</div>
 
-</script>
+<div>
+<h2>Daily</h2>
+<span>Updates</span>
+</div>
+</div>
 
-</body>
-</html>
+<a class="join" href="https://t.me/+LS0QvSe7sQ4wMmFl" target="_blank">
+Join Telegram Now 🚀
+</a>
+
+</section>
+
+<section class="features">
+<h2>Why Join Us?</h2>
+
+<div class="grid">
+
+<div class="card">
+📊
+<h3>Market Analysis</h3>
+<p>Educational charts & market insights.</p>
+</div>
+
+<div class="card">
+📈
+<h3>Daily Updates</h3>
+<p>Regular market news and learning content.</p>
+</div><div class="card">
+⚡
+<h3>Fast Alerts</h3>
+<p>Stay informed with timely educational updates.</p>
+</div>
+
+<div class="card">
+🎯
+<h3>Trading Education</h3>
+<p>Learn trading concepts and strategies.</p>
+</div>
+
+</div>
+</section>
+
+<section class="risk">
+<h2>Risk Disclaimer</h2>
+<p>
+Trading and investing involve risk. This Telegram community shares educational information only and does not provide personalized financial advice.
+</p>
+</section>
+
+<div class="sticky">
+<a href="https://t.me/+LS0QvSe7sQ4wMmFl" target="_blank">
+JOIN FREE TELEGRAM 🚀
+</a>
+</div>
+
+<footer>
+Ads Managed By
+<a href="https://t.me/+-HYxd1wYkMkzYzI1" target="_blank">
+MaxJohn Ad Agency
+</a>
+</footer>
